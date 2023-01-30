@@ -1,0 +1,21 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cSpell.words": [
+    "autosize",
+    "CBGIQ",
+    "countup",
+    "giakhanh",
+    "giscus",
+    "gstatic",
+    "hastscript",
+    "kbar",
+    "loginapp",
+    "NEXTAUTH",
+    "rehype",
+    "Scrollspy",
+    "shiki",
+    "Supabase",
+    "tabler"
+  ]
+}

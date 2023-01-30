@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #fff;
+  --color-secondary: #000;
+
+  --theme-100: #fffcfc;
+  --theme-200: #fff8f7;
+  --theme-300: #fff0ee;
+  --theme-400: #ffe6e2;
+  --theme-500: #fdd8d3;
+  --theme-600: #fac7be;
+  --theme-700: #f3b0a2;
+  --theme-800: #ea9280;
+  --theme-900: #e54d2e;
+  --theme-1000: #db4324;
+  --theme-1100: #ca3214;
+  --theme-1200: #341711;
+
+  --accent-100: #fafafa;
+  --accent-200: #eaeaea;
+  --accent-300: #999;
+  --accent-400: #888;
+  --accent-500: #666;
+  --accent-600: #444;
+  --accent-700: #333;
+  --accent-800: #111;
+}
+
+.dark:root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+
+  --theme-100: #1d1412;
+  --theme-200: #2a1410;
+  --theme-300: #3b1813;
+  --theme-400: #481a14;
+  --theme-500: #541c15;
+  --theme-600: #652016;
+  --theme-700: #7f2315;
+  --theme-800: #a42a12;
+  --theme-900: #e54d2e;
+  --theme-1000: #ec5e41;
+  --theme-1100: #f16a50;
+  --theme-1200: #feefec;
+
+  --accent-100: #111;
+  --accent-200: #333;
+  --accent-300: #444;
+  --accent-400: #666;
+  --accent-500: #888;
+  --accent-600: #999;
+  --accent-700: #eaeaea;
+  --accent-800: #fafafa;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  @apply bg-red-500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-600;
+}
+
+::selection {
+  @apply bg-[rgba(249,6,6,0.05)] text-[#f90606] dark:bg-[rgba(249,6,6,0.2)] dark:text-[#ff4c4c];
+}
+
+* {
+  text-rendering: geometricprecision;
+  -webkit-tap-highlight-color: transparent;
+}
+
+pre,
+code {
+  @apply font-code;
+}
+
+[data-rehype-pretty-code-fragment] {
+  @apply relative;
+}
+
+div[data-rehype-pretty-code-title][data-theme='light'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='light'] {
+  @apply block dark:hidden;
+}
+
+div[data-rehype-pretty-code-title][data-theme='dark'],
+div[data-rehype-pretty-code-fragment] pre[data-theme='dark'] {
+  @apply hidden dark:block;
+}
+
+span[data-rehype-pretty-code-fragment] code[data-theme='light'] {
+  @apply inline dark:hidden;
+}
+
+span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
+  @apply hidden dark:inline;
+}
