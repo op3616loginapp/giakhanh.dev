@@ -8,7 +8,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import Typewriter from "typewriter-effect";
 
-import { HEADER_LINKS } from "@/config/links";
+import { HEADER_LINKS } from "@/config/site-navigation";
 import Dropdown from "./Dropdown";
 
 const Header = () => {
@@ -73,7 +73,6 @@ const Header = () => {
               {HEADER_LINKS.map((link, i) => (
                 <Dropdown.Item key={i}>
                   <Link href={link.href} className="flex items-center gap-4">
-                    {link.icon}
                     <div>{link.text}</div>
                   </Link>
                 </Dropdown.Item>

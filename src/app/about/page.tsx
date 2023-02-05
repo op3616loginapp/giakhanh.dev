@@ -1,27 +1,30 @@
-import { allPages } from "contentlayer/generated";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { getCurrentUser } from "@/lib/session";
+import prisma from "@/lib/prisma";
+import StackedCardProfile from "@/ui/ProfilePage/StackedCardProfile";
 
-import MDXComponents from "@/ui/MDXComponents";
-import ProfileCard from "@/ui/ProfileCard";
+const getMessages = async () => {
+  const messages = await prisma.guestbook.findMany({
+    orderBy: {
+      updated_at: "desc",
+    },
+  });
 
-const getPage = () => {
-  const page = allPages.find((page) => page.slug === "about");
-
-  return page;
+  return messages.map((message) => ({
+    id: message.id.toString(),
+    body: message.body,
+    image: message.image,
+    created_by: message.created_by,
+    updated_at: message.updated_at.toString(),
+  }));
 };
 
-const AboutPage = () => {
-  const page = getPage();
-  const MDXComponent = useMDXComponent(page.body.code);
+const AboutPage = async () => {
+  const user = await getCurrentUser();
+  const comments = await getMessages();
 
   return (
     <>
-      <h2 className="my-4 text-4xl font-bold">About</h2>
-      <p className="mb-8 text-accent-500">👋 Hi there! I am Khanh Le.</p>
-
-      <div className="prose prose-zinc w-full max-w-none dark:prose-invert">
-        <MDXComponent components={MDXComponents} />
-      </div>
+      <StackedCardProfile comments={comments} user={user} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { FOOTER_LINKS } from "@/config/links";
+import { FOOTER_LINKS } from "@/config/site-navigation";
 import { SITE_METADATA } from "@/config/site-metadata";
 import Link from "@/ui/Link";
 

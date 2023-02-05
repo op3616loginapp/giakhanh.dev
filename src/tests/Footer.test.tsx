@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import { FOOTER_LINKS } from "@/config/links";
+import { FOOTER_LINKS } from "@/config/site-navigation";
 import Footer from "@/ui/Footer";
 
 describe("@/components/Layout/Footer", () => {

@@ -17,7 +17,6 @@ type FooterLink = {
 export type FooterLinks = FooterLink[];
 
 export type DropdownItem = {
-  icon: React.ReactNode;
   href: string;
   text: string;
 };
