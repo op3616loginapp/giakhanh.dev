@@ -1,6 +1,9 @@
+"use client";
+
 import { IconArrowRight } from "@tabler/icons-react";
 
 import Link from "next/link";
+import { RoughNotation } from "react-rough-notation";
 
 import PostCard from "@/ui/PostCard";
 import { BlogPostCore } from "@/lib/types";
@@ -14,7 +17,17 @@ const BlogPosts = (props: BlogPostsProps) => {
 
   return (
     <>
-      <h2 className="mb-8 text-3xl font-bold">Blog posts</h2>
+      <h2 className="mb-8 text-3xl font-bold">
+        <RoughNotation
+          type="underline"
+          show={true}
+          color="#fff176"
+          animationDelay={800}
+          animationDuration={1200}
+        >
+          Recent Posts{" "}
+        </RoughNotation>
+      </h2>
       <div className="grid gap-4 sm:grid-cols-2">
         {posts.map((post) => (
           <PostCard key={post._id} {...post} />

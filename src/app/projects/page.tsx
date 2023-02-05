@@ -32,10 +32,10 @@ const ProjectsPage = () => {
                 className="md:w-72"
                 rounded="rounded-lg"
               />
-              <div className="flex-1 py-4 px-2 md:py-2 md:px-4">
+              <div className="flex flex-1 flex-col justify-between py-4 px-2 md:py-2 md:px-4">
                 <div>
                   <h2 className="text-2xl font-bold text-secondary">{name}</h2>
-                  <div className="text-accent-500">{description}</div>
+                  <div className="mt-2 text-accent-500">{description}</div>
                 </div>
                 <div className="mt-[5px] flex flex-wrap gap-[7px]">
                   {badges.map((badge, i) => {

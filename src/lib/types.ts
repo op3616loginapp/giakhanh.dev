@@ -27,3 +27,9 @@ export type Headings = {
   title: string;
   level: number;
 }[];
+
+export type TwemojiProps = {
+  emoji: string;
+  size?: string;
+  className?: string;
+};

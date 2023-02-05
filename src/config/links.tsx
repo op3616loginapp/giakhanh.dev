@@ -1,9 +1,4 @@
 import {
-  IconBrandFacebook,
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandTwitter,
-  IconBrandYoutube,
   IconChartBar,
   IconDeviceDesktop,
   IconFlame,
@@ -11,7 +6,6 @@ import {
   IconPencil,
   IconUserCircle,
 } from "@tabler/icons-react";
-import { HeroLinks } from "@/ui/Hero";
 import { DropdownItem, FooterLinks } from "@/lib/types";
 
 export const HEADER_LINKS: DropdownItem[] = [
@@ -102,21 +96,3 @@ export const FOOTER_LINKS: FooterLinks = [
   },
 ];
 
-export const HERO_LINKS: HeroLinks = [
-  {
-    icon: <IconBrandGithub size={28} />,
-    href: "https://github.com/op3616",
-  },
-  {
-    icon: <IconBrandInstagram size={28} />,
-    href: "https://www.instagram.com/op3616/",
-  },
-  {
-    icon: <IconBrandFacebook size={28} />,
-    href: "https://www.facebook.com/op3616/",
-  },
-  {
-    icon: <IconBrandTwitter size={28} />,
-    href: "https://twitter.com/op3616",
-  },
-];

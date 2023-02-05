@@ -4,7 +4,7 @@
 
 :root {
   --color-primary: #fff;
-  --color-secondary: #000;
+  --color-secondary: #22272e;
 
   --theme-100: #fffcfc;
   --theme-200: #fff8f7;
@@ -30,7 +30,7 @@
 }
 
 .dark:root {
-  --color-primary: #000;
+  --color-primary: #22272e;
   --color-secondary: #fff;
 
   --theme-100: #1d1412;

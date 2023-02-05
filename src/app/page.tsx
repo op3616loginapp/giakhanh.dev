@@ -1,7 +1,7 @@
-import BlogPosts from "@/ui/BlogPost";
-import Hero from "@/ui/Hero";
-import ProjectCards from "@/ui/ProjectCards";
 import { getAllPosts } from "@/lib/mdx";
+import BlogPosts from "@/ui/BlogPost";
+import ProjectCards from "@/ui/ProjectCards";
+import HeroSection from "@/ui/HeroSection";
 
 const Home = () => {
   const posts = getAllPosts({
@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero />
+      <HeroSection />
       <ProjectCards />
       <BlogPosts posts={posts} />
     </>

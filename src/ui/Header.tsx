@@ -2,13 +2,13 @@
 
 import { IconCommand, IconMenu } from "@tabler/icons-react";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
 import { useKBar } from "kbar";
+import Link from "next/link";
+import clsx from "clsx";
+import Typewriter from "typewriter-effect";
 
 import { HEADER_LINKS } from "@/config/links";
-import Logo from "./Logo";
 import Dropdown from "./Dropdown";
 
 const Header = () => {
@@ -17,10 +17,19 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-white/80 shadow-sm saturate-[1.8] backdrop-blur-[10px] dark:bg-black/50 dark:saturate-100">
-      <div className="mx-auto flex h-[60px] max-w-4xl items-center justify-between px-8">
+      <div className="mx-auto flex h-[60px] max-w-5xl items-center justify-between px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center gap-1">
-          <Logo width={28} height={28} />
+          <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+            <span className="mr-1">I&apos;m</span>
+            <Typewriter
+              options={{
+                strings: ["Khanh", "a developer"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
         </Link>
 
         {/* Content */}
@@ -32,7 +41,7 @@ const Header = () => {
                 className={clsx(
                   "rounded py-2 px-3 text-sm font-medium transition-colors duration-300",
                   {
-                    ["text-accent-500 hover:bg-accent-100 hover:text-secondary"]:
+                    ["text-accent-500 hover:bg-accent-200 hover:text-secondary"]:
                       link.href !== pathname,
                   },
                   {

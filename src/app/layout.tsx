@@ -1,4 +1,5 @@
 import "@/styles/main.css";
+import "@/styles/twemoji.css";
 
 import { FC, PropsWithChildren } from "react";
 import { Fira_Code, Inter, Noto_Sans_TC } from "@next/font/google";
@@ -9,6 +10,7 @@ import { ThemeProvider } from "@/lib/next-themes";
 import QuickCommand from "@/ui/QuickCommand";
 import CustomToaster from "@/ui/CustomToaster";
 import Footer from "@/ui/Footer";
+import Analytics from "@/ui/Analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,13 +45,14 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
         <ThemeProvider attribute="class">
           <QuickCommand>
             <Header />
-            <main className="relative mx-auto mb-16 max-w-4xl px-8 py-24">
+            <main className="relative mx-auto max-w-5xl px-8 py-24">
               {children}
             </main>
             <Footer />
             <CustomToaster />
           </QuickCommand>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
