@@ -6,10 +6,6 @@ export const HEADER_LINKS: DropdownItem[] = [
     text: "Blog",
   },
   {
-    href: "/dashboard",
-    text: "Dashboard",
-  },
-  {
     href: "/projects",
     text: "Projects",
   },
