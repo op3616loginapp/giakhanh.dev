@@ -63,7 +63,7 @@ const HeroSection = () => {
                   My writings
                 </span>
               </Link>
-              <Link href="/snippets" className="hover:underline">
+              <Link href="/" className="hover:underline">
                 <Twemoji emoji="dna" />
                 <span className="umami--click--home-link-snippets ml-1.5">
                   My snippets collection

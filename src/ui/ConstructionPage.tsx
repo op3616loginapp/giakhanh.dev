@@ -159,7 +159,7 @@ const ConstructionPage = () => {
             <div className="mt-8 flex">
               <Link
                 href="/"
-                className="group my-8 flex items-center gap-4 text-lg font-medium"
+                className="group mt-4 flex items-center gap-4 text-lg font-medium"
               >
                 <span>Or Return To Home</span>
                 <IconArrowRight className="h-4 w-4 transition duration-200 group-hover:translate-x-1" />

@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { NextSeo, NextSeoProps } from "next-seo";
 import { FC } from "react";
 import { getFavicon } from "@/lib/get-favicon";
+import Script from "next/script";
 
 type HeadProps = NextSeoProps;
 

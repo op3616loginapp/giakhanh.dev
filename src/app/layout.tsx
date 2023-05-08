@@ -10,7 +10,6 @@ import { ThemeProvider } from "@/lib/next-themes";
 import QuickCommand from "@/ui/QuickCommand";
 import CustomToaster from "@/ui/CustomToaster";
 import Footer from "@/ui/Footer";
-import Analytics from "@/ui/Analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -52,7 +51,6 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
             <CustomToaster />
           </QuickCommand>
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );

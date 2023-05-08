@@ -5,8 +5,8 @@ import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { RoughNotation } from "react-rough-notation";
 
-import PostCard from "@/ui/PostCard";
 import { BlogPostCore } from "@/lib/types";
+import PostCard from "@/ui/PostCard";
 
 type BlogPostsProps = {
   posts: BlogPostCore[];
